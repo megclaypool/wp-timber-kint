@@ -8,7 +8,7 @@
  * Depends: Timber, Kint Debugger
  * */
 class Timber_Kint_Debug {
-    function __construct() {
+  function __construct() {
     add_filter('get_twig', array($this,'add_to_twig'));
   }
   function add_to_twig($twig) {
@@ -17,9 +17,9 @@ class Timber_Kint_Debug {
     return $twig;
   }
   function call_kint($twig, $vars, $context = FALSE) {
-      if ($twig->isDebug()) {
-        if(!class_exists('Kint')) {
-            return 'Kint class doesn\'t exist! You can download it from <a href="https://wordpress.org/plugins/kint-debugger/">https://wordpress.org/plugins/kint-debugger/</a>';
+    if ($twig->isDebug()) {
+      if (!class_exists('Kint')) {
+        return 'Kint class doesn\'t exist! You can download it from <a href="https://wordpress.org/plugins/kint-debugger/">https://wordpress.org/plugins/kint-debugger/</a>';
       }
       if ($context) {
         Kint::dump($context);
