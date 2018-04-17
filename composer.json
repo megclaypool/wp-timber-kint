@@ -1,0 +1,6 @@
+{
+    "name": "timber-kint-debug/timber-kint-debug",
+    "require": {
+        "kint-php/kint": "^2.2"
+    }
+}
