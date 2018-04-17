@@ -8,6 +8,8 @@
  * Depends: Timber, Kint Debugger
  * */
 defined( 'ABSPATH' ) or die( 'Nope, not accessing this' );
+include 'vendor/autoload.php';
+use Kint;
 class Timber_Kint_Debug {
   function __construct() {
     add_filter('get_twig', array($this,'add_to_twig'));
@@ -18,7 +20,7 @@ class Timber_Kint_Debug {
     return $twig;
   }
   function call_kint($twig, $vars, $context = FALSE) {
-    if ($twig->isDebug()) {
+   // if ($twig->isDebug()) {
       if (!class_exists('Kint')) {
         return 'Kint class doesn\'t exist! You can download it from <a href="https://wordpress.org/plugins/kint-debugger/">https://wordpress.org/plugins/kint-debugger/</a>';
       }
@@ -28,6 +30,6 @@ class Timber_Kint_Debug {
         Kint::dump($vars);
       }
     }
-  }
+ // }
 }
 new Timber_Kint_Debug();
