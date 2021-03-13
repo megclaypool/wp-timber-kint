@@ -1,4 +1,5 @@
-# timber-kint-debug
-Wordpress plugin for debugging Timber (Twig template) with Kint.
-To use this plugin You need Twig for Wordpress (Timber) and plugin to enable Kint support. 
-After that you can just write {{ kint() }} or {{ kint(somevariable) }} to debug your template.
+# wp-timber-kint
+
+This one-stop WordPress plugin includes [Kint](https://github.com/kint-php/kint), so that you can use `d()`, `kint()`, etc in your php files. It also defines a Timber function so that you can use {{ kint() }} or {{ kint(somevariable) }} in your twig files.
+
+Timber is not required to use this plugin, but it's super awesome cool and if you haven't yet, you should really check it out :)
